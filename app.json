@@ -8,6 +8,9 @@
       "expo-router"
     ],
     "name": "Shared_app",
-    "slug": "Shared_app"
+    "slug": "Shared_app",
+    "android": {
+      "package": "com.anonymous.Shared_app"
+    }
   }
 }
