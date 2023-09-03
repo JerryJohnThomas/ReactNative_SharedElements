@@ -20,16 +20,21 @@ const cavePIC = Image.resolveAssetSource(cave).uri;
 import red from "../assets/Galaxy/red.jpg";
 const redPIC = Image.resolveAssetSource(red).uri;
 
-const modal3 = () => {
+import mountain from "../assets/Galaxy/mountain.jpg";
+const mountainPIC = Image.resolveAssetSource(mountain).uri;
+
+
+const modal2 = () => {
     const router = useRouter();
 
- 
+
+
     return (
         <View style={styles.container}>
             <Pressable onPress={() => router.back()}>
                 <Animated.Image
-                    sharedTransitionTag="tag2"
-                    source={{ uri: redPIC }}
+                    sharedTransitionTag="tag3"
+                    source={{ uri: mountainPIC }}
                     style={styles.image}
                 />
                 <Animated.Text
@@ -90,4 +95,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default modal3;
+export default modal2;

@@ -22,6 +22,14 @@ const StackLayout = () => {
                     presentation: "modal",
                 }}
             />
+
+            <Stack.Screen
+                name="modal3"
+                options={{
+                    headerShown: false,
+                    presentation: "modal",
+                }}
+            />
         </Stack>
     );
 };

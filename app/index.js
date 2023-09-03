@@ -5,22 +5,28 @@ import {
     Pressable,
     Image,
     Dimensions,
+    ScrollView,
 } from "react-native";
 import React, { useEffect } from 'react'
 import { Link } from 'expo-router'
 import cave from "../assets/Galaxy/cave.jpg"
 const cavePIC = Image.resolveAssetSource(cave).uri;
+
 import red from "../assets/Galaxy/red.jpg";
 const redPIC = Image.resolveAssetSource(red).uri;
+
+import mountain from "../assets/Galaxy/mountain.jpg";
+const mountainPIC = Image.resolveAssetSource(mountain).uri;
+
+
 const { width, height } = Dimensions.get("window");
 import Animated, { FadeInDown, FadeInLeft } from "react-native-reanimated";
 
 const index = () => {
-    useEffect(()=>{
-    },[])
+
 
   return (
-      <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.container}>
           <Link href="/modal" asChild>
               <Pressable>
                   <Animated.Image
@@ -41,9 +47,19 @@ const index = () => {
               </Pressable>
           </Link>
 
+          <Link href="/modal3" asChild>
+              <Pressable>
+                  <Animated.Image
+                      sharedTransitionTag="tag3"
+                      source={{ uri: mountainPIC }}
+                      style={styles.image}
+                  />
+              </Pressable>
+          </Link>
+
           {/* <Text>index</Text>
           <Text>index</Text> */}
-      </View>
+      </ScrollView>
   );
 }
 
@@ -51,14 +67,16 @@ const styles = StyleSheet.create({
     container: {
         alignContent: "center",
         justifyContent: "center",
-        marginTop: 20,
+        marginVertical: 20,
+        marginBottom: 100,
+        paddingBottom: 50,
     },
-    image:{
+    image: {
         width: "100%",
         height: 240,
-        resizeMode: 'contain',
+        resizeMode: "contain",
         marginVertical: 20,
-    }
+    },
 });
 
 export default index

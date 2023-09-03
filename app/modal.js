@@ -23,11 +23,6 @@ const redPIC = Image.resolveAssetSource(red).uri;
 const modal = () => {
     const router = useRouter();
 
-    useEffect(() => {
-        console.log(redPIC);
-        console.log(red);
-    }, []);
-
     return (
         <View style={styles.container}>
             <Pressable onPress={() => router.back()}>
